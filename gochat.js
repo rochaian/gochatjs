@@ -110,6 +110,7 @@ function createChatbotComponent() {
       #chatbot-form-overlay h3{
        font-size: 16px;
        margin-top: 0px;
+       color: black;
       }
 
       #chatbot-user-form label{
@@ -117,6 +118,7 @@ function createChatbotComponent() {
         display:block;
         width: 100%;
         margin-bottom: 4px;
+        color: black;
       }
 
       #chatbot-user-form  input {
@@ -124,6 +126,7 @@ function createChatbotComponent() {
           height: 28px;
           width: 100%;
           margin-bottom: 8px;
+          color: black;
       }
 
       #chatbot-user-form button{
