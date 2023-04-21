@@ -122,11 +122,13 @@ function createChatbotComponent() {
       }
 
       #chatbot-user-form  input {
-          display:block;
-          height: 28px;
-          width: 100%;
-          margin-bottom: 8px;
-          color: black;
+        display: block;
+        height: 30px;
+        width: 100%;
+        margin-bottom: 8px;
+        border-radius: 4px;
+        border: solid 1px #444444;
+        color: black;
       }
 
       #chatbot-user-form button{
