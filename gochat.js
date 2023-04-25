@@ -268,7 +268,7 @@ function createChatbotComponent() {
   
   generateHash(hashString)
         .then(hash => {
-          // console.log(hash)
+
           hashClient = hash;
         })
         .catch(error => console.error(error));
@@ -352,14 +352,6 @@ function createChatbotComponent() {
 
        chatbotTyping.style.display = "block";
 
-       console.log( { body :
-        {
-            messages_history: history,
-            newMessage: newMessage,
-            userID: userID,
-            hashClient: hashClient,
-            userInfo: userInfo
-        }});
 
        await fetch('https://us-central1-golaunch-ia-chat.cloudfunctions.net/app/message', 
        { method: 'POST', 
@@ -376,15 +368,12 @@ function createChatbotComponent() {
       })
       .then(res => res.json())
       .then(data => {
-          console.log(data);
           const p = document.createElement('p');
           p.style.backgroundColor = "#fcffda";
 
           const newMessageAssistant = {role: 'assistant', content: data.completion.content}
        
           messages_history.push(newMessageAssistant);
-          
-          console.log(messages_history);
 
           content = newMessageAssistant.content;
 
